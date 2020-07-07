@@ -2,42 +2,53 @@
 // alert(el.innerText);
 
 const seed = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// let r1 = [],
-//   r2 = [],
-//   r3 = [],
-//   r4 = [],
-//   r5 = [],
-//   r6 = [],
-//   r7 = [],
-//   r8 = [],
-//   r9 = [];
-
-// console.log(r1, r2, r3, r4, r5, r6, r7, r8, r9);
 
 // set row 1 as the seed
 let r1 = [...seed];
 
-// temp rows to manipulate row 1 without changing row 1
-let tempRowA = [...r1];
-let tempRowB = [...r1];
-let tempRowC = tempRowA.slice(1); //save with first removed
-let tempRowD = tempRowB.shift(-8); //save only first
+let r2 = [...r1];
+r2.push(r2.shift());
+r2.push(r2.shift());
+r2.push(r2.shift());
 
-let r2 = [...tempRowC]; //set r2 as a copy
-r2.push(tempRowD); //push first to last
+let r3 = [...r1];
+r3.unshift(r3.pop());
+r3.unshift(r3.pop());
+r3.unshift(r3.pop());
+
+let r4 = [...seed];
+r4.unshift(r4.pop());
+
+let r5 = [...r4];
+r5.push(r5.shift());
+r5.push(r5.shift());
+r5.push(r5.shift());
+
+let r6 = [...r4];
+r6.unshift(r6.pop());
+r6.unshift(r6.pop());
+r6.unshift(r6.pop());
+
+let r7 = [...seed];
+r7.push(r7.shift());
+
+let r8 = [...r7];
+r8.push(r8.shift());
+r8.push(r8.shift());
+r8.push(r8.shift());
+
+let r9 = [...r7];
+r9.unshift(r9.pop());
+r9.unshift(r9.pop());
+r9.unshift(r9.pop());
 
 console.log("Seed = " + seed);
 console.log("row 1 = " + r1);
-console.log("tempRowC = " + tempRowC);
-console.log("tempRowD = " + tempRowD);
 console.log("row 2 = " + r2);
-
-// let frontThree = r1.slice(0, 3);
-// console.log(frontThree);
-
-// let backSix = r1.slice(-6);
-// console.log(backSix);
-
-// r2 = backSix;
-// r2.push(frontThree);
-// console.log(r2);
+console.log("row 3 = " + r3);
+console.log("row 4 = " + r4);
+console.log("row 5 = " + r5);
+console.log("row 6 = " + r6);
+console.log("row 7 = " + r7);
+console.log("row 8 = " + r8);
+console.log("row 9 = " + r9);
