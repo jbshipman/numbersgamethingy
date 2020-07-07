@@ -1,6 +1,3 @@
-// const el = document.getElementById("test");
-// alert(el.innerText);
-
 const seed = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // set row 1 as the seed
