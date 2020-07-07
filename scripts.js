@@ -1,4 +1,7 @@
 const seed = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const seed = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// const randSeed = [...seed];
+seed.sort(() => Math.random() - 0.5);
 
 // set row 1 as the seed
 let r1 = [...seed];
@@ -39,7 +42,6 @@ r9.unshift(r9.pop());
 r9.unshift(r9.pop());
 r9.unshift(r9.pop());
 
-console.log("Seed = " + seed);
 console.log("row 1 = " + r1);
 console.log("row 2 = " + r2);
 console.log("row 3 = " + r3);
